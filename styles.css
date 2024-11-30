@@ -1,336 +1,361 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Body Styling */
 body {
-    font-family: 'Noto Sans Devanagari', sans-serif; /* Fallback font */
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures body takes full height of the viewport */
-    justify-content: space-between; /* Footer sticks to the bottom */
-    margin: 0; /* Removed margin to prevent any overflow */
+  font-family: "Noto Sans Devanagari", sans-serif; /* Fallback font */
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures body takes full height of the viewport */
+  justify-content: space-between; /* Footer sticks to the bottom */
+  margin: 0; /* Removed margin to prevent any overflow */
 }
 
 /* Header Styling */
 header {
-    background: white;
-    color: #4CAF50;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Ensure header takes full width */
-    position: relative;
+  background: white;
+  color: #4caf50;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure header takes full width */
+  position: relative;
 }
 
 /* Container for the header content */
 .header-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%; /* Ensure the content inside takes full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure the content inside takes full width */
 }
 
 /* Logo Styling */
 #logo {
-    max-width: 120px;
-    height: auto;
-    margin-bottom: 10px;
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 /* Company Info (name and address) Styling */
 .company-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-h1, #address {
-    font-size: 24px;
-    margin: 0;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    width: 100%;
-    line-height: 1.5; /* Adjusted line-height to ensure characters are not clipped */
-    padding: 5px 0; /* Added padding to provide extra space above and below text */
-    text-align: center;
+h1,
+#address {
+  font-size: 24px;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  line-height: 1.5; /* Adjusted line-height to ensure characters are not clipped */
+  padding: 5px 0; /* Added padding to provide extra space above and below text */
+  text-align: center;
 }
 
 /* Company Name Styling */
 h1 {
-    font-size: 24px; /* Keep the font size consistent */
-    line-height: 1;
-    animation: typewriter 5s steps(40) infinite, pause 5s infinite;
+  font-size: 24px; /* Keep the font size consistent */
+  line-height: 1;
+  animation: typewriter 5s steps(40) infinite, pause 5s infinite;
 }
 
 /* Address Styling (Below the company name) */
 #address {
-    font-size: 18px;
-    color: red;
-    line-height: 1; /* Ensure sufficient height for special characters */
-    animation: typewriter 5s steps(40) 5s infinite, pause 5s infinite;
+  font-size: 18px;
+  color: red;
+  line-height: 1; /* Ensure sufficient height for special characters */
+  animation: typewriter 5s steps(40) 5s infinite, pause 5s infinite;
 }
 
 #address {
-    font-size: 18px;
-    color: red;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    animation: typewriter 5s steps(40) 5s infinite, pause 5s infinite;
+  font-size: 18px;
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  animation: typewriter 5s steps(40) 5s infinite, pause 5s infinite;
 }
 
 /* Typewriter Effect (without cursor) */
 @keyframes typewriter {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100%;
-    }
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 /* Pause Effect to synchronize both texts */
 @keyframes pause {
-    0%, 100% {
-        width: 100%; /* Keeps the text fully visible without a cursor */
-    }
-    50% {
-        width: 0%; /* Empty at the middle to reset */
-    }
+  0%,
+  100% {
+    width: 100%; /* Keeps the text fully visible without a cursor */
+  }
+  50% {
+    width: 0%; /* Empty at the middle to reset */
+  }
 }
 
 /* Navigation Styling */
 nav {
-    background-color: #4CAF50; /* Green background */
-    width: 100%; /* Ensures the nav spans the full width */
+  background-color: #4caf50; /* Green background */
+  width: 100%; /* Ensures the nav spans the full width */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;  /* Ensures space between items */
-    width: 100%; /* Ensure the navigation takes full width */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Ensures space between items */
+  width: 100%; /* Ensure the navigation takes full width */
 }
 
 nav ul li {
-    flex: 1; /* Makes each list item take up equal space */
-    text-align: center; /* Centers the text inside each li */
+  flex: 1; /* Makes each list item take up equal space */
+  text-align: center; /* Centers the text inside each li */
 }
 
 nav ul li a {
-    color: #D32F2F; /* A slightly darker red */
-    text-decoration: none;
-    display: block;
-    padding: 10px 0; /* No left/right padding, only vertical padding */
-    font-size: 16px; /* Font size */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+  color: #d32f2f; /* A slightly darker red */
+  text-decoration: none;
+  display: block;
+  padding: 10px 0; /* No left/right padding, only vertical padding */
+  font-size: 16px; /* Font size */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
 }
 
 nav ul li a:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 /* Hover effect */
 nav ul li:hover {
-    background-color: #45a049; /* Slightly darker green when hovering */
+  background-color: #45a049; /* Slightly darker green when hovering */
 }
 
 /* Mobile Optimization */
 @media screen and (max-width: 767px) {
-    nav ul {
-        flex-direction: row; /* Ensure items are displayed in a row */
-        justify-content: space-between; /* Ensure space between items */
-    }
+  nav ul {
+    flex-direction: row; /* Ensure items are displayed in a row */
+    justify-content: space-between; /* Ensure space between items */
+  }
 
-    nav ul li {
-        flex: 1; /* Ensure equal width on mobile */
-    }
+  nav ul li {
+    flex: 1; /* Ensure equal width on mobile */
+  }
 
-    nav ul li a {
-        font-size: 14px; /* Smaller font size on mobile */
-        padding: 1px 0; /* Reduced vertical padding for a thinner nav */
-    }
+  nav ul li a {
+    font-size: 14px; /* Smaller font size on mobile */
+    padding: 1px 0; /* Reduced vertical padding for a thinner nav */
+  }
 }
 
 /* Section Styling */
 section {
-    padding: 20px;
-    margin: 0; /* Ensures no overflow from margin */
-    background: white;
-    width: 100%; /* Ensures full width */
-    max-width: none; /* Removes any max-width limit */
-    margin-top: 20px; /* Adds space between sections */
-    flex-grow: 1; /* Ensures content takes up remaining space */
-    border-radius: 0; /* Removed border-radius */
+  padding: 20px;
+  margin: 0; /* Ensures no overflow from margin */
+  background: white;
+  width: 100%; /* Ensures full width */
+  max-width: none; /* Removes any max-width limit */
+  margin-top: 20px; /* Adds space between sections */
+  flex-grow: 1; /* Ensures content takes up remaining space */
+  border-radius: 0; /* Removed border-radius */
 }
 
 /* Product Grid Container */
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four items per row on larger screens */
-    gap: 20px;
-    margin: 0 auto; /* Center the product grid */
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Four items per row on larger screens */
+  gap: 20px;
+  margin: 0 auto; /* Center the product grid */
 }
 
 /* Product Styling */
 .product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
-    text-align: center; /* Center text inside product card */
-    overflow: hidden; /* Ensures any overflow is hidden */
-    position: relative; /* Helps with positioning child elements */
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center; /* Center text inside product card */
+  overflow: hidden; /* Ensures any overflow is hidden */
+  position: relative; /* Helps with positioning child elements */
 }
 
 /* Product image styling */
 .product img {
-    width: 100%; /* Ensure the image takes full width of the container */
-    height: 200px; /* Fixed height for consistency */
-    object-fit: cover; /* Ensures image is cropped to fill the container */
-    object-position: center; /* Centers the image in the container */
+  width: 100%; /* Ensure the image takes full width of the container */
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image is cropped to fill the container */
+  object-position: center; /* Centers the image in the container */
+}
+
+/* Style for unordered lists inside product descriptions */
+.products-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 10px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.products-container ul li {
+  margin-bottom: 5px;
+  line-height: 1.4;
 }
 
 /* Footer Styling */
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #4CAF50;
-    color: white;
-    width: 100%;
-    margin-top: auto; /* Ensures footer stays at the bottom */
+  text-align: center;
+  padding: 20px 0;
+  background: #4caf50;
+  color: white;
+  width: 100%;
+  margin-top: auto; /* Ensures footer stays at the bottom */
 }
 
 /* Media Queries for Mobile Responsiveness */
 
 /* Mobile devices (portrait) */
 @media screen and (max-width: 767px) {
-    body {
-        margin: 0; /* Ensures no margin on mobile */
-    }
+  body {
+    margin: 0; /* Ensures no margin on mobile */
+  }
 
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    /* Adjust font size to ensure text fits within the screen */
-    h1 {
-        font-size: 18px; /* Slightly smaller font size on mobile */
-    }
+  /* Adjust font size to ensure text fits within the screen */
+  h1 {
+    font-size: 18px; /* Slightly smaller font size on mobile */
+  }
 
-    #address {
-        font-size: 16px; /* Adjust font size for address */
-    }
+  #address {
+    font-size: 16px; /* Adjust font size for address */
+  }
 
-    #logo {
-        max-width: 100px;
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+  #logo {
+    max-width: 100px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 
-    nav ul {
-        padding: 0;
-        margin: 10px 0;
-    }
+  nav ul {
+    padding: 0;
+    margin: 10px 0;
+  }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 
-    section {
-        margin: 0; /* Removed margin to prevent overflow */
-        padding: 15px;
-    }
+  section {
+    margin: 0; /* Removed margin to prevent overflow */
+    padding: 15px;
+  }
 
-    footer {
-        padding: 15px 0;
-    }
+  footer {
+    padding: 15px 0;
+  }
 
-    /* One product per row on mobile */
-    .products-container {
-        grid-template-columns: 1fr; /* One item per row */
-    }
+  /* One product per row on mobile */
+  .products-container {
+    grid-template-columns: 1fr; /* One item per row */
+  }
 
-    /* Full width for About and Contact sections */
-    #about, #contact {
-        width: 100%; /* Ensures full width */
-        padding: 15px;
-        box-sizing: border-box; /* Prevents overflow from padding */
-        border-radius: 0; /* Removed border-radius */
-    }
+  /* Full width for About and Contact sections */
+  #about,
+  #contact {
+    width: 100%; /* Ensures full width */
+    padding: 15px;
+    box-sizing: border-box; /* Prevents overflow from padding */
+    border-radius: 0; /* Removed border-radius */
+  }
 }
 
 /* Tablets (portrait) and small laptops */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-        margin: 0; /* Ensures no margin on tablets */
-    }
+  body {
+    margin: 0; /* Ensures no margin on tablets */
+  }
 
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
-    h1 {
-        font-size: 22px;
-    }
+  h1 {
+    font-size: 22px;
+  }
 
-    #logo {
-        max-width: 110px;
-    }
+  #logo {
+    max-width: 110px;
+  }
 
-    nav ul {
-        margin: 0;
-        padding: 0;
-    }
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
 
-    nav ul li {
-        display: inline;
-        margin: 0 10px;
-    }
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
 
-    section {
-        margin: 0; /* Removed margin */
-        padding: 18px;
-    }
+  section {
+    margin: 0; /* Removed margin */
+    padding: 18px;
+  }
 
-    /* Two items per row on tablets */
-    .products-container {
-        grid-template-columns: repeat(2, 1fr); /* Two items per row */
-    }
+  /* Two items per row on tablets */
+  .products-container {
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+  }
 
-    /* Full width for About and Contact sections */
-    #about, #contact {
-        width: 100%; /* Ensures full width */
-        padding: 18px;
-        box-sizing: border-box;
-        border-radius: 0; /* Removed border-radius */
-    }
+  /* Full width for About and Contact sections */
+  #about,
+  #contact {
+    width: 100%; /* Ensures full width */
+    padding: 18px;
+    box-sizing: border-box;
+    border-radius: 0; /* Removed border-radius */
+  }
 }
 
 /* Desktop (large screens) */
 @media screen and (min-width: 1025px) {
-    .products-container {
-        grid-template-columns: repeat(4, 1fr); /* Four items per row on large screens */
-    }
+  .products-container {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Four items per row on large screens */
+  }
 
-    /* Full width for About and Contact sections */
-    #about, #contact {
-        width: 100%; /* Ensures full width */
-        padding: 20px;
-    }
+  /* Full width for About and Contact sections */
+  #about,
+  #contact {
+    width: 100%; /* Ensures full width */
+    padding: 20px;
+  }
 }
