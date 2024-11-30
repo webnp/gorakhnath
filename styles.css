@@ -145,16 +145,21 @@ nav ul li a {
   display: block;
   padding: 10px 0; /* No left/right padding, only vertical padding */
   font-size: 16px; /* Font size */
-  transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease,
+    color 0.3s ease; /* Added transition for background-color and text color */
 }
 
 nav ul li a:hover {
   transform: scale(1.1); /* Slight zoom on hover */
 }
 
-/* Hover effect */
+/* Hover effect for list items */
 nav ul li:hover {
-  background-color: #45a049; /* Slightly darker green when hovering */
+  background-color: #d32f2f; /* Red background on hover */
+}
+
+nav ul li:hover a {
+  color: #4caf50; /* Green text color on hover */
 }
 
 /* Mobile Optimization */
