@@ -75,6 +75,13 @@ h1 {
   animation: typewriter 5s steps(40) infinite, pause 5s infinite;
 }
 
+/* Section Stylings */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold; /* Make the text bold */
+}
+
 /* Address Styling (Below the company name) */
 #address {
   font-size: 18px;
