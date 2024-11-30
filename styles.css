@@ -164,18 +164,57 @@ nav ul li:hover a {
 
 /* Mobile Optimization */
 @media screen and (max-width: 767px) {
+  nav {
+    padding: 0; /* No padding on top or bottom */
+  }
+
   nav ul {
     flex-direction: row; /* Ensure items are displayed in a row */
     justify-content: space-between; /* Ensure space between items */
+    margin: 0; /* Remove margin around the list */
+    padding: 0; /* Remove padding for the list */
   }
 
   nav ul li {
-    flex: 1; /* Ensure equal width on mobile */
+    text-align: center;
+    flex: unset; /* Remove flex properties on mobile */
+    padding: 0; /* No padding for each list item */
+  }
+
+  nav ul li:first-child {
+    padding-left: 10px; /* Padding for the first link */
+  }
+
+  nav ul li:last-child {
+    padding-right: 10px; /* Padding for the last link */
   }
 
   nav ul li a {
     font-size: 14px; /* Smaller font size on mobile */
-    padding: 1px 0; /* Reduced vertical padding for a thinner nav */
+    padding: 0; /* No vertical padding */
+  }
+
+  /* Disable hover effect on mobile */
+  nav ul li:hover {
+    background-color: transparent; /* Remove background color change */
+  }
+
+  nav ul li:hover a {
+    color: #d32f2f; /* Keep text color as the original on hover */
+  }
+
+  /* Optional: Add active state on tap for mobile */
+  nav ul li:active {
+    background-color: #d32f2f; /* Red background on tap */
+  }
+
+  nav ul li:active a {
+    color: #4caf50; /* Green text color on tap */
+  }
+
+  /* Optional: Slight zoom effect for mobile taps */
+  nav ul li:active a {
+    transform: scale(1.05); /* Subtle scale on tap */
   }
 }
 
