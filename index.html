@@ -174,7 +174,22 @@
     </main>
 
     <footer>
-        <p>© २०२४ बाबा गोरखनाथ प्राकृतिक जडीबुटी धूप</p>
+        <p>© <span id="current-year"></span> बाबा गोरखनाथ प्राकृतिक शुद्ध जडीबुटी धूप</p>
     </footer>
+    
+    <script>
+        // Function to convert English numerals to Devanagari
+        function toDevanagari(num) {
+            const devanagariDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+            return num.toString().split('').map(digit => devanagariDigits[parseInt(digit)]).join('');
+        }
+    
+        // Get the current year
+        const currentYear = new Date().getFullYear();
+        
+        // Convert the year to Devanagari and update the span
+        document.getElementById('current-year').textContent = toDevanagari(currentYear);
+    </script>
+    
 </body>
 </html>
