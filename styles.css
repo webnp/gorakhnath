@@ -7,7 +7,7 @@
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans Devanagari', sans-serif; /* Fallback font */
     background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,6 @@ header {
     width: 100%;
 }
 
-/* Both company name and address have same width behavior */
 h1, #address {
     font-size: 24px;
     margin: 0;
@@ -63,12 +62,25 @@ h1, #address {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    width: 100%; /* Ensure it takes full width of its container */
+    width: 100%;
+    line-height: 1.5; /* Adjusted line-height to ensure characters are not clipped */
+    padding: 5px 0; /* Added padding to provide extra space above and below text */
+    text-align: center;
 }
 
 /* Company Name Styling */
 h1 {
+    font-size: 24px; /* Keep the font size consistent */
+    line-height: 1;
     animation: typewriter 5s steps(40) infinite, pause 5s infinite;
+}
+
+/* Address Styling (Below the company name) */
+#address {
+    font-size: 18px;
+    color: red;
+    line-height: 1; /* Ensure sufficient height for special characters */
+    animation: typewriter 5s steps(40) 5s infinite, pause 5s infinite;
 }
 
 /* Address Styling (Below the company name) */
@@ -284,7 +296,5 @@ footer {
     #about, #contact {
         width: 100%; /* Ensures full width */
         padding: 20px;
-        box-sizing: border-box;
-        border-radius: 0; /* Removed border-radius */
     }
 }
